@@ -40,7 +40,7 @@ h2.titulo span{
     cursor: pointer;
 }
 
-button:hover{
+button:hover, form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px rgba(0, 201, 0, 0.644);
     transform: scale(1.05);
     transition: .2s;
@@ -184,7 +184,7 @@ section.sobre .flex{
     text-align: justify;
 }
 
-.sobre .txt-sobre .btn-social button{
+.btn-social button{
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -246,4 +246,125 @@ section.portfolio .flex{
 
 .overlay:hover{
     opacity: 100%;
+}
+
+/* ESTILO DO FORMULARIO DE CONTATO*/
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: rgba(58, 57, 57, 0.486);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+form #area{
+    resize: none;
+    height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: rgb(0, 255, 0);
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff27;
+    border-radius: 5px;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid rgb(0, 255, 0);
+    
+}
+
+
+footer .line-footer > p > i{
+    color: rgba(0, 255, 85, 0.397);
+    font-size: 22px;
+}
+
+footer .line-footer > p > a{
+    color: white;
+    text-decoration: none;
+}
+
+footer .line-footer > p > a:hover {
+    font-size: 17px;
+}
+
+@media screen and (max-width:1024px){
+    /* CLASSES GERAIS */
+    .flex{
+        flex-direction:column;
+    }
+    h2.titulo{
+        font-size: 34px;
+        line-height: 30px;
+    }
+    
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+        display: none;
+        
+    }
+    
+    /* TOPO DO SITE */
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+    
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+    /* ESTILO DAS ESPECIALIDADES */
+    section.especialidades{
+        padding: 40px 8%;
+}
+
 }
